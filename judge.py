@@ -2,11 +2,6 @@ import epicbox
 import hashlib
 from random import randint
 from sys import stderr
-# Should I give them the information of TLE and non-consist?
-# TODO:
-# 1. Add knapsack problem.
-# 2. Add binary search problem.
-# 3. Add bfs problem.
 
 epicbox.configure(
     profiles=[
@@ -16,16 +11,19 @@ epicbox.configure(
 
 q_num = 0
 
-def proofofwork():
-    s = hashlib.sha1()
-    target = hex(randint(10000000000000000000000,123123123213123000000123213))[-8:-2] 
-    print('target =',"'{}'".format(target))
-    print('assert sha1(input)[-6:] == target')
-    print("input:")
-    inp = input().strip().encode('utf-8')
-    s.update(inp)
-    assert s.hexdigest().strip()[-6:] == target
+def is_valid(digest, diff):
+    bits = ''.join(bin(i)[2:].zfill(8) for i in digest)
+    return bits[:diff] == '0' * diff
 
+def proofofwork():
+    hardness = 23
+    prefix = hex(randint(1000000000000000000000000000000000000, 123123123213123000000123213**3))[-18:-2] 
+    print(f'prefix = "{prefix}"')
+    print(f'sha256(prefix + answer) has {hardness} leading zeros. (In binary)')
+    print("input:")
+    inp = input().strip()
+    s = prefix + inp
+    assert is_valid(hashlib.sha256(s.encode()).digest(), hardness)
 
 def propose(question, example_input, example_output, testcases, len_limit):
     global q_num
@@ -84,7 +82,7 @@ Conqure all and get the flag!!!
 
 
 import json
-#proofofwork()
+proofofwork()
 questions = json.load(open('questions.json'))
 for question in questions:
     propose(*question)
