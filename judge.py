@@ -5,7 +5,8 @@ from sys import stderr
 
 epicbox.configure(
     profiles=[
-        epicbox.Profile('python', 'python:3.6.5-alpine')
+        #epicbox.Profile('python', 'python:3.6.5-alpine')
+        epicbox.Profile('python', 'hortune/python3.6-alpine')
     ]
 )
 
