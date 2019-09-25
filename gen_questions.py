@@ -6,7 +6,7 @@ def problem1():
     eg_input = '3\n1 2\n3 4\n5 6'
     eg_output = '3\n7\n11'
     testcases = []
-    len_limit = 100
+    len_limit = 75
     MAX = 12312312321321321321321321312
     for i in range(5):
         input_, output_ = [], []
@@ -25,7 +25,7 @@ def problem2():
     eg_input = '3 5\n1 2\n1 3\n2 2'
     eg_output = '3'
     testcases = []
-    len_limit = 400
+    len_limit = 200
     MAX = 1231231232132132132
     for i in range(5):
         input_, output_ = [], []
@@ -46,10 +46,10 @@ def problem2():
 
 def problem3():
     content = 'Depth of the tree. There is a size N tree with node index from 0 to N-1. The first line is an integer N (tree size). Then, there would be N numbers in the next line each represents the father of the node. (0 is always the root). 10 <= N <=10000. Please notice that for any i, father[i] < i.'
-    eg_input = '3\n0\n0\n1'
+    eg_input = '3\n0 0 1'
     eg_output = '2'
     testcases = []
-    len_limit = 1000
+    len_limit = 300
     MAX = 1231231232132132132
     
     for i in range(5):

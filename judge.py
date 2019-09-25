@@ -75,7 +75,9 @@ In this challenge, all of your code should be only one line long. xD
 
 By the way, your code would be tested by directly running and tested by running with "[\\n{}\\n]".format(code).
 
-Conqure all the challenges!!!
+There are three small challenges!!!
+
+Conqure all and get the flag!!!
 """
 )
 
@@ -86,4 +88,4 @@ questions = json.load(open('questions.json'))
 for question in questions:
     propose(*question)
 
-print('FLAG:Balsn{8_8_l13t_c0mp63h3ns10n}')
+print('FLAG:Balsn{8_8_l13t_c0mp63h3ns10n_0r_A_5en8_80x_ch01l3n93}')
