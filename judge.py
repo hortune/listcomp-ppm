@@ -1,6 +1,7 @@
 import epicbox
 import hashlib
 from random import randint
+from sys import stderr
 # Should I give them the information of TLE and non-consist?
 # TODO:
 # 1. Add knapsack problem.
@@ -63,7 +64,7 @@ def propose(question, example_input, example_output, testcases, len_limit):
             print("Wrong Answer QQ")
             exit(1)
 
-        print("Pass the {} test case.".format(idx))
+        print("Pass the {} test case.".format(idx), flush=True)
     print('Congrats! You pass question {}.'.format(q_num))
     q_num += 1
     
