@@ -74,7 +74,7 @@ We are the guy that loves to solve programming problems with list comprehension.
 In this challenge, all of your code should be only one line long. xD
 
 By the way, your code would be tested by directly running and tested by running with "[\\n{}\\n]".format(code).
-
+And it should not contain ' or ". 
 There are three small challenges!!!
 
 Conqure all and get the flag!!!
