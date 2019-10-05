@@ -19,7 +19,7 @@ def solve(prefix, difficulty):
         if is_valid(hashlib.sha256(s.encode()).digest()):
             return str(i)
 
-conn = remote('127.0.0.1', 9487)
+conn = remote('52.201.239.96', 9487)
 sleep(0.5)
 gg = conn.recv()
 print gg

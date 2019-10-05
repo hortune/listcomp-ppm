@@ -34,9 +34,9 @@ def propose(question, example_input, example_output, testcases, len_limit):
     print("Input Length Limit:", len_limit)
     print("Your list comprehension code:")
     content = input()
-    assert len(content) < len_limit
-    assert content.find('"') == -1
-    assert content.find("'") == -1
+    assert len(content) < len_limit, 'Length exceed limit'
+    assert content.find('"') == -1, 'Find invalid character "'
+    assert content.find("'") == -1, 'Find invalid character \''
     new_content = '[\n'+ content +'\n]'
     
     for idx, (input_, output_) in enumerate(testcases):
@@ -73,7 +73,8 @@ Welcome to the list comprehension ppm!!!
 We are the guy that loves to solve programming problems with list comprehension.
 In this challenge, all of your code should be only one line long. xD
 
-By the way, your code would be tested by directly running and tested by running with "[\\n{}\\n]".format(code).
+By the way, your code would be tested by **directly running** and tested by running with **"[\\n{}\\n]".format(code)**.
+
 
 There are three small challenges!!!
 
